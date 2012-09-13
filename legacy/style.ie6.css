@@ -1,0 +1,12 @@
+/* IE 6 Styles */
+
+header, footer { background-image: none; }
+
+a { color: #575568; }
+
+#branding h2 a, .footer p a { color: white; }
+
+.content_panel, #site_meta {
+	display: inline;
+	margin-top: 2em;
+}

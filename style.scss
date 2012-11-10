@@ -9,17 +9,6 @@ Author: Peter Gasston
 Author URI: http://www.broken-links.com/
 */
 
-/* Typography */
-
-@media screen and (min-width: 481px) {
-
-  @font-face {
-    font-family: ClickClack;
-    src: local('ClickClack'),url('/tools/ClickClack.otf') format('opentype');
-  }
-
-}
-
 /* Base */
 
 html {
@@ -459,7 +448,7 @@ $color-hilite: #727d7b;
 
 .site_meta {
   float: right;
-  margin: 0 1.04167% 20px 0;
+  margin: 0 1.04167% 2rem 0;
   width: 33.33333%;
 }
 

@@ -7,11 +7,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="<?php bloginfo('charset'); ?>">
+<meta name="viewport" content="width=device-width">
 <title><?php wp_title('&raquo;',true,'right'); ?><?php bloginfo('name'); ?></title>
-<style type="text/css">
-@font-face {
-font-family: ClickClack;
-src: local('ClickClack'),url('/tools/ClickClack.otf') format('opentype');
+<style>
+@media screen and (min-width: 481px) {
+  @font-face {
+    font-family: ClickClack;
+    src: local('ClickClack'),url('/tools/ClickClack.otf') format('opentype');
+  }
 }
 body { font-size: 10px; }
 div#container { margin: 0 auto; width: 50%; }

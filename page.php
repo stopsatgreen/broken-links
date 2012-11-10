@@ -23,8 +23,9 @@
 <div class="section" id="site_meta">
 <div class="aside">
 <?php if (is_page('about-me-this-site')) { ?>
-<h2>Latest Twitter</h2>
-<p><?php aktt_latest_tweet(); ?></p>
+	<?php if ( !dynamic_sidebar() ) : ?>
+	<p>No sidebar</p>
+<?php endif; ?>
 <?php } else { ?>
 <h2>Find me elsewhere</h2>
 <ul>

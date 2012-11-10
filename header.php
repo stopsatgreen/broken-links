@@ -35,6 +35,14 @@ header h2 a { color: white; }
 </div>
 <div class="nav" role="navigation">
   <div class="inside">
-	<?php wp_nav_menu(array('theme_location' => 'primary','container' => '' )); ?>
+<?php 
+	$navargs = array(
+		'theme_location' => 'primary',
+		'container' => '',
+		'menu_class' => 'main-nav',
+		'menu_id' => ''
+	);
+	wp_nav_menu($navargs);
+?>
   </div>
 </div>

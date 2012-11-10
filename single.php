@@ -1,6 +1,5 @@
 <?php get_header(); ?>
-<div id="container">
-<?php include(TEMPLATEPATH . '/legacy/ie6.php'); ?>
+<div class="container">
 <div class="section content_panel" role="main">
 <!-- Start the loop -->
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
@@ -32,7 +31,7 @@
 <!-- End the loop -->
 <?php endif; ?>
 </div>
-<div class="section" id="site_meta">
+<div class="section site_meta">
 <div class="aside">
 <!-- Meta Information -->
 <h2>About this post</h2>

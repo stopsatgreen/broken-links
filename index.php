@@ -1,6 +1,5 @@
 <?php get_header(); ?>
-<div id="container">
-<?php include(TEMPLATEPATH . '/legacy/ie6.php'); ?>
+<div class="container">
 <div class="section content_panel" role="main">
 <!-- Start the loop -->
 <div class="hfeed">
@@ -15,7 +14,7 @@ update_post_caches($posts);
   } else {
     include(TEMPLATEPATH . '/hentry.php');
     echo '<hr />';
-	  include(TEMPLATEPATH . '/site_meta.php');
+	  include(TEMPLATEPATH . '/post_meta.php');
   } ?>
 	</div>
 <?php endwhile; ?>
@@ -29,7 +28,7 @@ update_post_caches($posts);
 </div>
 <p><a class="more-link" href="<?php bloginfo('siteurl');?>/archives/">Archive by category and date</a></p>
 </div>
-<div class="section" id="site_meta">
+<div class="section site_meta">
 <?php get_sidebar(); ?>
 </div>
 </div>

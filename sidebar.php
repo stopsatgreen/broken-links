@@ -1,4 +1,4 @@
-	<div class="navigation" id="site_meta_container">
+	<div class="navigation site_meta_container">
 		<div class="book">
 			<h2>The Book of CSS3</h2>
 			<p>My first book is out now from No Starch Press. <a href="http://nostarch.com/css3.htm">Buy it from the publisher</a> or from <a href="http://www.amazon.co.uk/gp/product/1593272863?ie=UTF8&tag=brokenlinks-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=1593272863">Amazon.co.uk</a>, <a href="http://www.amazon.com/gp/product/1593272863?ie=UTF8&tag=broklink-20&link_code=as3&camp=211189&creative=373489&creativeASIN=1593272863">Amazon.com</a>.</p>

@@ -20,6 +20,13 @@ add_theme_support('automatic-feed-links');
 add_theme_support('post-formats',array('aside','gallery'));
 add_custom_background();
 
+register_sidebar(array(
+	'before_widget' => '',
+	'after_widget' => '',
+	'before_title' => '<h2>',
+	'after_title' => '</h2>',
+));
+
 if ( function_exists( 'register_nav_menu' ) ) {
 	register_nav_menu( 'primary', 'Primary Navigation' );
 }

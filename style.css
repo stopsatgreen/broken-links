@@ -573,8 +573,31 @@ img#wpstats {
   font-size: 1.4rem; }
 
 /* Influads */
-#influads_block {
-  margin: 0 auto; }
+.influads_block {
+  margin: 0 auto;
+  max-width: 250px;
+  overflow: hidden;
+  text-align: center;
+  width: 100%; }
+
+.influads_block .influads_img {
+  width: 100%; }
+
+.influads_block .influads_text,
+.influads_block .influads_text_a,
+.influads_block .influads_text_a:visited {
+  color: #1F1F1F;
+  font: 1.2rem/1.5 Georgia, serif;
+  padding-top: 0.5rem;
+  text-decoration: none; }
+
+.influads_block .influads_powered_div {
+  padding: 0.5rem 0; }
+
+.influads_block .influads_powered_link {
+  color: green;
+  font: 0.9rem Arial, sans-serif;
+  text-decoration: none; }
 
 /* Media Queries */
 @media screen and (max-width: 480px) {

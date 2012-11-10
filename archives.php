@@ -4,7 +4,7 @@ Template Name: Archive Index
 */
 ?>
 <?php get_header(); ?>
-<div id="container">
+<div class="container">
 <div class="section content_panel">
 <!-- Start the loop -->
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
@@ -41,8 +41,7 @@ Template Name: Archive Index
 <?php endif; ?>
 
 </div>
-<div class="section" id="site_meta">
-<?php include(TEMPLATEPATH . '/searchform.php'); ?>
+<div class="section site_meta">
 	<div class="aside">
 
 <h2>Spam Count</h2>

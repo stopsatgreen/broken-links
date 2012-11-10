@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="container">
+<div class="container">
 <div class="section content_panel">
 	<div class="article">
 	<h1 class="section-title"><?php wp_title(''); ?> Archive</h1>
@@ -9,7 +9,7 @@
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
 	<?php include(TEMPLATEPATH . '/hentry.php'); ?>
-	<?php include(TEMPLATEPATH . '/site_meta.php'); ?>
+	<?php include(TEMPLATEPATH . '/post_meta.php'); ?>
 	</div>
 <hr />
 <?php endwhile; ?>
@@ -24,7 +24,7 @@
 <!-- !!! STYLE ME !!! -->
 <p class="pagination"><?php posts_nav_link(' | ','Newer','Older'); ?></p>
 </div>
-<div class="section" id="site_meta">
+<div class="section site_meta">
 	<div class="aside">
 <?php $my_query = new WP_Query('showposts=1&cat=4');
 while ($my_query->have_posts()) : $my_query->the_post();

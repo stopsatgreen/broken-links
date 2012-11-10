@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="container">
+<div class="container">
 <?php include(TEMPLATEPATH . '/legacy/ie6.php'); ?>
 <div class="section content_panel">
 <!-- Start the loop -->
@@ -20,7 +20,7 @@
 <!-- !!! STYLE ME !!! -->
 <p><?php posts_nav_link('between','before','after'); ?></p>
 </div>
-<div class="section" id="site_meta">
+<div class="section site_meta">
 <div class="aside">
 <?php if (is_page('about-me-this-site')) { ?>
 	<?php if ( !dynamic_sidebar() ) : ?>

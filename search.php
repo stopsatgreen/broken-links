@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="container">
+<div class="container">
 <div class="section content_panel">
 <!-- Start the loop -->
 	<div class="article intro">
@@ -8,7 +8,7 @@
 	</div>
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 	<?php include(TEMPLATEPATH . '/hentry.php'); ?>
-	<?php include(TEMPLATEPATH . '/site_meta.php'); ?>
+	<?php include(TEMPLATEPATH . '/post_meta.php'); ?>
 </div>
 <hr />
 <?php endwhile; ?>
@@ -23,8 +23,7 @@
 <!-- !!! STYLE ME !!! -->
 <p><?php posts_nav_link('between','before','after'); ?></p>
 </div>
-<div class="section" id="site_meta">
-<?php include(TEMPLATEPATH . '/searchform.php'); ?>
+<div class="section site_meta">
 	<div class="aside">
 <?php $my_query = new WP_Query('showposts=1&cat=4');
 while ($my_query->have_posts()) : $my_query->the_post();

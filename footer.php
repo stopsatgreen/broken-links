@@ -7,5 +7,6 @@
 <!-- WP Stats -->
 <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
 <script>(function(){ var acc =   "acc_586d629_pub";var st ="css";var or= "h";var e=document.getElementsByTagName("script")[0];var d=document.createElement("script");d.src=('https:' == document.location.protocol ?'https://' : 'http://') +"engine.influads.com/show/"+or+"/"+st+"/"+acc;d.type="text/javascript"; d.async=true; d.defer=true; e.parentNode.insertBefore(d,e);})();</script>
+<script>(function(){var acc='acc_886d629_pub';var st='css';var or='s';var e=document.getElementsByTagName('script')[0];var d=document.createElement('script');d.src=('https:' == document.location.protocol ?'https://' : 'http://') +'engine.influads.com/show/'+or+'/'+st+'/'+acc;d.type='text/javascript';d.async=true;d.defer=true; e.parentNode.insertBefore(d,e);})();</script>
 <?php wp_footer(); ?>
 

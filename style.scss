@@ -253,11 +253,13 @@ h2 a {
   background-color: #fff;
   display: block;
   @include transition(all 0.5s);
+  
   &:hover {
     background-color: #9E2A3F;
     color: white;
     text-shadow: 1px 1px 1px #335;
   }
+  
   &:before { content: '\00BB  '; }
 }
 
@@ -309,7 +311,7 @@ hr {
   .inside {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 1rem;
     position: relative;
   }
   
@@ -521,14 +523,14 @@ $color-hilite: #727d7b;
 /* Comments */
 
 #comments_list {
-    list-style: none;
-    margin-bottom: 0;
-    padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 #comments_list li {
-    font-size: 1rem;
-    padding: 2.1rem 0;
+  font-size: 1rem;
+  padding: 2.1rem 0;
 }
 
 #comments_list .alt { background-color: #DDD; }
@@ -536,21 +538,21 @@ $color-hilite: #727d7b;
 #comments_list .author { background-color: #E6F2F8; }
 
 #comments_list h3, #comments_list p, #comments_list hr {
-    font-size: 1.4rem;
-    line-height: 1.5;
-    margin: 0 1.4rem 2rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin: 0 1.4rem 2rem;
 }
 
 #comments_list h3 {
-    margin-bottom: 0;
-    text-transform: none;
+  margin-bottom: 0;
+  text-transform: none;
 }
 
 #comments_list h3 span { text-transform: uppercase; }
 
 #comments_list p {
-    padding: 0;
-    text-indent: 0;
+  padding: 0;
+  text-indent: 0;
 }
 
 #comments_list .author h3 { font-style: italic; }
@@ -571,23 +573,18 @@ img.avatar {
 
 .site_meta_container li {
 	border-bottom: 1px dotted #CDE0FF;
-	margin: 0 0.5em;
-	padding: 0.4167em 0 0.333em;
+	margin: 0 0.6rem;
+	padding: 0.5rem 0 0.4rem;
 }
 
 .navigation ul > li:first-child { padding-top: 0; }
 
-.site_meta_container .site_meta { padding: 0 1.6em; }
+.site_meta_container .site_meta { padding: 0 1.6rem; }
 
-.site_meta li {
-background-position: left center;
-background-repeat: no-repeat;
-padding-left: 20px !important;
-}
-
-.site_meta_container li.rss {
-	background-image: url('images/feed.png');
+.site_meta_container .rss {
+	background: url('images/feed.png') no-repeat 0 50%;
 	border-bottom: none;
+  padding-left: 2rem !important;
 }
 
 /* Microformats */
@@ -616,13 +613,13 @@ font-variant: small-caps;
   box-shadow: $args;
 }
 
-#commentform input.text,
+#commentform input[type='text'],
 #commentform textarea  {
   border: 1px solid #666;
   border-radius: 4px;
   color: #212;
   font-size: 1em;
-  padding: 0.33em 0;
+  padding: 0.33333em 0;
   vertical-align: middle;
   width: 100%;
 

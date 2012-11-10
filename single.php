@@ -10,13 +10,6 @@
 	<?php the_content(); ?>
 </div>
 </article>
-<!--h2>Bookmark</h2>
-<ul id="social-bookmarks">
-<li class="delicious"><a href="http://delicious.com/save?url=<?php the_permalink(); ?>">Delicious</a></li>
-<li class="digg"><a href="http://digg.com/submit?url=<?php the_permalink(); ?>">Digg</a></li>
-<li class="stumbleupon"><a href="http://stumbleupon.com/submit?url=<?php the_permalink(); ?>">StumbleUpon</a></li>
-<li><?php the_flattr_permalink() ?></li>
-</ul-->
 <?php if(related_posts_exist()) : ?>	
 <?php related_posts(); ?>
 <?php endif; ?>

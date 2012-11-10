@@ -267,7 +267,7 @@ hr {
   .header .inside {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 1rem;
     position: relative; }
   .header h1 {
     border-bottom: 0;
@@ -472,23 +472,19 @@ img.avatar {
 
 .site_meta_container li {
   border-bottom: 1px dotted #CDE0FF;
-  margin: 0 0.5em;
-  padding: 0.4167em 0 0.333em; }
+  margin: 0 0.6rem;
+  padding: 0.5rem 0 0.4rem; }
 
 .navigation ul > li:first-child {
   padding-top: 0; }
 
 .site_meta_container .site_meta {
-  padding: 0 1.6em; }
+  padding: 0 1.6rem; }
 
-.site_meta li {
-  background-position: left center;
-  background-repeat: no-repeat;
-  padding-left: 20px !important; }
-
-.site_meta_container li.rss {
-  background-image: url("images/feed.png");
-  border-bottom: none; }
+.site_meta_container .rss {
+  background: url("images/feed.png") no-repeat 0 50%;
+  border-bottom: none;
+  padding-left: 2rem !important; }
 
 /* Microformats */
 .hentry .vcard,
@@ -509,16 +505,16 @@ img.avatar {
   display: block;
   font-variant: small-caps; }
 
-#commentform input.text,
+#commentform input[type='text'],
 #commentform textarea {
   border: 1px solid #666;
   border-radius: 4px;
   color: #212;
   font-size: 1em;
-  padding: 0.33em 0;
+  padding: 0.33333em 0;
   vertical-align: middle;
   width: 100%; }
-  #commentform input.text:focus,
+  #commentform input[type='text']:focus,
   #commentform textarea:focus {
     -moz-box-shadow: inset 0 0 5px #9e2a3f;
     -webkit-box-shadow: inset 0 0 5px #9e2a3f;

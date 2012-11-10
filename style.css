@@ -7,11 +7,6 @@ Version: 0.8 SASSY
 Author: Peter Gasston
 Author URI: http://www.broken-links.com/
 */
-/* Typography */
-@media screen and (min-width: 481px) {
-  @font-face {
-    font-family: ClickClack;
-    src: local("ClickClack"), url("/tools/ClickClack.otf") format("opentype"); } }
 /* Base */
 html {
   font-size: 62.5%;

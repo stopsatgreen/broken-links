@@ -63,11 +63,13 @@ h2 {
   clear: both;
   padding: 1rem;
 
-  &.entry-title { font-weight: bold;
+  &.entry-title {
+    font-weight: bold;
+    padding: 0;
 
     a {
       display: block;
-      padding: 0.5rem 0;
+      padding: 1rem;
 
       &:hover,
       &:active {
@@ -449,7 +451,7 @@ hr {
 	background-color: rgba(205,224,255,0.2);
 	border: 1px dotted #CDE0FF;
 	margin-bottom: 2rem;
-	padding: 2rem 0;
+	padding: 1rem 0;
 
   h2, p, li {
     font-size: 1.2rem;
@@ -794,6 +796,10 @@ img#wpstats {
 
   }
 
+  /* Asides */
+
+  .aside { padding: 2rem 0; }
+
   /* Site Meta */
   
   .site_meta_container {
@@ -857,6 +863,8 @@ img#wpstats {
     }
 
   }
+
+  .hfeed .aside { margin-bottom: 0; }
 
 }
 

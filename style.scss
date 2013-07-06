@@ -12,6 +12,14 @@ Author URI: http://www.broken-links.com/
 @import 'normalize.scss';
 @import 'variables.scss';
 
+@font-face {
+  font-family: 'icomoon';
+  src: url('/fonts/icomoon68060/fonts/icomoon.eot');
+  src: url('/fonts/icomoon68060/fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('/fonts/icomoon68060/fonts/icomoon.woff') format('woff'), url('/fonts/icomoon68060/fonts/icomoon.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Base */
 
 html {
@@ -160,24 +168,27 @@ pre {
   @include linear-gradient(#faeae6,#fff);
 	border-top: 0.1rem dotted #9E2A3F;
 	color: black;
-	font: 1.2rem/1.667 monospace;
+	font: 14px/1.4286 monospace;
 	margin: 2rem 0;
 	padding: 0.9rem 1rem 1rem;
 	white-space: pre-wrap;
 	word-wrap: break-word;
+
+  mark {
+  	background-color: #ffc;
+  	display: inline-block;
+  	outline: 1px dotted #212;
+  }
+
 }
 
-pre mark {
-	background-color: #ffc;
-	display: inline-block;
-	outline: 1px dotted #212;
-}
+a { color: #9E2A3F;
 
-a { color: #9E2A3F; }
+  &:hover,
+  &:hover * {
+    text-decoration: none;
+  }
 
-a:hover,
-a:hover * {
-  text-decoration: none;
 }
 
 h1 a,

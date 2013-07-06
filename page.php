@@ -23,9 +23,9 @@
 <div class="section site_meta">
 <div class="aside">
 <?php if (is_page('about-me-this-site')) { ?>
-	<?php if ( !dynamic_sidebar() ) : ?>
-	<p>No sidebar</p>
-<?php endif; ?>
+	<?php if ( is_active_sidebar(1) ) { ?>
+		<?php dynamic_sidebar('Twitter') ?>
+	<?php } ?>
 <?php } else { ?>
 <h2>Find me elsewhere</h2>
 <ul>

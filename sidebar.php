@@ -1,26 +1,16 @@
 	<div class="navigation site_meta_container">
 		<div class="book">
-			<h2>The Book of CSS3</h2>
-			<p>My first book is out now from No Starch Press. <a href="http://nostarch.com/css3.htm">Buy it from the publisher</a> or from <a href="http://www.amazon.co.uk/gp/product/1593272863?ie=UTF8&tag=brokenlinks-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=1593272863">Amazon.co.uk</a>, <a href="http://www.amazon.com/gp/product/1593272863?ie=UTF8&tag=broklink-20&link_code=as3&camp=211189&creative=373489&creativeASIN=1593272863">Amazon.com</a>.</p>
+			<h2>The Modern Web</h2>
+			<p>My new book is out now from No Starch Press. <a href="http://nostarch.com/modernweb/">Order from the publisher</a> (print copy comes with <b>free</b> eBook) or from <a href="http://www.amazon.co.uk/gp/product/1593274874/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=1593274874&linkCode=as2&tag=brokenlinks-21">Amazon.co.uk</a>, <a href="http://www.amazon.com/gp/product/1593274874/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1593274874&linkCode=as2&tag=broklink-20">Amazon.com</a>, <a href="http://www.barnesandnoble.com/w/the-modern-web-peter-gasston/1114672512">Barnes &amp; Noble</a> and many more booksellers.</p>
 		</div>
 <div id="influads_block" class="influads_block"></div>
-<?php if (!is_home()) { ?>
-		<ul class="posts-popular">
-		<li><h3>Recent Posts</h3></li>
-		<?php mdv_recent_posts(); ?>
-		</ul>
-<?php } ?>
-<?php if (is_home()) { ?>
-		<ul>
-		<li><h3>Recent Comments</h3></li>
-<?php get_recent_comments(); ?>
-		<?php //mdv_recent_comments(5,8,'<li>','...</li>'); ?>
-		</ul>
-<?php } ?>
-		<ul class="posts-popular">
+<?php if ( is_active_sidebar(2) ) : ?>
+	<?php dynamic_sidebar( 'Posts' ); ?>
+<?php endif; ?>
+		<!--ul class="posts-popular">
 		<li><h3>Popular Posts</h3></li>
 		<?php getPopularPosts(5,7,' &raquo; Broken Links'); ?>
-		</ul>	
+		</ul-->	
 	<hr class="ornament" />
 	<ul>
 	<li class="rss"><a href="<?php bloginfo('rss2_url'); ?>">Subscribe to the RSS Feed</a></li>

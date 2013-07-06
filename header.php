@@ -26,7 +26,7 @@ header h2 a { color: white; }
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php wp_head(); ?>
 </head>
-<body>
+<body id="peter-gasston">
 <div class="header" role="banner">
   <div class="inside">
     <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
@@ -34,6 +34,7 @@ header h2 a { color: white; }
   </div>
 </div>
 <div class="nav" role="navigation">
+	<a href="#peter-gasston" class="nav-toggle">Navigation</a>
   <div class="inside">
 <?php 
 	$navargs = array(

@@ -1,0 +1,23 @@
+$color-core: #30617c;
+$color-key: #50a2ce;
+$color-hilite: #727d7b;
+
+@mixin box-shadow($args...) {
+  -moz-box-shadow: $args;
+   -webkit-box-shadow: $args;
+  box-shadow: $args;
+}
+
+@mixin linear-gradient($args...) {
+  background-image: -moz-linear-gradient($args);
+  background-image: -o-linear-gradient($args);
+  background-image: -webkit-linear-gradient($args);
+  background-image: linear-gradient($args);
+}
+
+@mixin transition($args...) {
+  -moz-transition: $args;
+  -o-transition: $args;
+  -webkit-transition: $args;
+  transition: $args;
+}

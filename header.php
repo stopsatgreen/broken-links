@@ -22,7 +22,7 @@ header h2 a { color: white; }
 <!--[if lt IE 7]>
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/legacy/style.ie6.css" media="screen">
 <![endif]-->
-<!--script src="<?php bloginfo('url'); ?>/mint/?js"></script-->
+<script src="<?php bloginfo('url'); ?>/mint/?js"></script>
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php wp_head(); ?>
 </head>

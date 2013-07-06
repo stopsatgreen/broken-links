@@ -54,7 +54,6 @@ h1, h2 {
   line-height: 1.11111;
   margin: 0;
 	text-align: center;
-	text-shadow: 2px 1px 1px #DDD;
 }
 
 h1 { border-width: 0 0 1px; }
@@ -70,7 +69,8 @@ h2 {
       display: block;
       padding: 0.5rem 0;
 
-      &:hover {
+      &:hover,
+      &:active {
         background-color: #efefef;
         text-decoration: none;
       }
@@ -196,10 +196,10 @@ h2 a {
   color: inherit !important;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:active {
     color: #222;
     text-decoration: underline;
-    text-shadow: 1px 2px 2px #CCC;
   }
 }
 
@@ -230,10 +230,10 @@ h2 a {
   display: block;
   @include transition(all 0.5s);
   
-  &:hover {
+  &:hover,
+  &:active {
     background-color: #9E2A3F;
     color: white;
-    text-shadow: 1px 1px 1px #335;
   }
   
   &:before { content: '\00BB  '; }
@@ -305,7 +305,6 @@ hr {
     margin: 0;
     padding: 0.8rem 1rem;
     text-align: left;
-    text-shadow: none;
     text-transform: uppercase;
 
     a {
@@ -314,10 +313,10 @@ hr {
       display: block;
       padding-left: 4rem;
 
-      &:hover {
+      &:hover,
+      &:active {
         color: inherit;
         text-decoration: none;
-        text-shadow: none;
       }
 
     }
@@ -346,10 +345,14 @@ hr {
   
   a { color: $color-core; }
   
-  .more-link:hover {
-    background-color: $color-key;
-    color: white;
-    text-shadow: 1px 1px 1px $color-core;
+  .more-link {
+
+    &:hover,
+    &:active {
+      background-color: $color-key;
+      color: white;
+    }
+
   }
   
   .header h1 a { background-image: url('images/broken-links.blue.svg'); }
@@ -394,11 +397,13 @@ hr {
     line-height: 2.5;
     padding: 0 1rem;
 
-    &.current_page_item {
-      background-color: #7F8B89;
-      text-shadow: 0 1px 1px black;
+    &.current_page_item { background-color: #7F8B89;
 
-      a:hover { text-decoration: none; }
+      a:hover,
+      a:active {
+        text-decoration: none;
+      }
+    
     }
 
     a {
@@ -411,8 +416,11 @@ hr {
         color: #ffff9a;
         text-decoration: underline;
       }
+    
     }
+  
   }
+
 }
 
 .navigation {
@@ -426,14 +434,10 @@ hr {
   
   h3 {
   	padding: 0;
-  	text-shadow: 2px 1px 1px #DDD;
   	text-transform: uppercase;
   }
 
-  .h-list {
-    margin: 0;
-    padding: 0 15px;
-  }
+  .h-list { margin: 0; }
 
 } 
 
@@ -448,8 +452,8 @@ hr {
 	padding: 2rem 0;
 
   h2, p, li {
-    font-size: 1.3rem;
-    line-height: 1.5385;
+    font-size: 1.2rem;
+    line-height: 1.66667;
   }
 
   h2, p, ul { padding: 0; }
@@ -549,13 +553,12 @@ img.avatar {
 .site_meta_container {
 
   ul {
-  	margin-bottom: 2rem;
-  	padding: 0 1rem;
+    margin-bottom: 2rem;
+    padding-left: 0;
   }
 
   li {
   	border-bottom: 1px dotted #CDE0FF;
-  	margin: 0 0.6rem;
   	padding: 0.5rem 0 0.4rem;
   }
 
@@ -701,6 +704,11 @@ img#wpstats {
 
 @media screen and (min-width: 481px) {
 
+  h1,
+  h2 {
+    text-shadow: 2px 1px 1px #DDD;
+  }
+
   h1,  
   h2.entry-title {
     margin-bottom: 2rem;
@@ -714,12 +722,51 @@ img#wpstats {
 
   h2.entry-title { font-size: 3.6rem; }
 
+  h1 a,
+  h2 a {
+
+    &:hover,
+    &:active {
+      text-shadow: 1px 2px 2px #CCC;
+    }
+
+  }
+
+  .more-link {
+    
+    &:hover,
+    &:active {
+      text-shadow: 1px 1px 1px #335;
+    }
+
+  }
+
   h3, p, li {
     font-size: 1.6rem;
     line-height: 1.5;
   }
 
+  /* Themes */
+
+  .blue .more-link {
+
+    &:hover,
+    &:active {
+      text-shadow: 1px 1px 1px $color-core;
+    }
+
+  }
+
   /* Layout */
+
+  .header h1 { text-shadow: none;
+
+    a:hover,
+    a:active {
+      text-shadow: none;
+    }
+
+  }
 
   .content_panel {
     float: left;
@@ -734,6 +781,37 @@ img#wpstats {
   }
 
   .nav-toggle { display: none; }
+
+  /* Navigation */
+
+  .main-nav li.current_page_item { text-shadow: 0 1px 1px black; }
+
+  .navigation {
+
+    h3 { text-shadow: 2px 1px 1px #DDD; }
+
+    .h-list { padding: 0 15px; }
+
+  }
+
+  /* Site Meta */
+  
+  .site_meta_container {
+
+    ul { padding: 0 1rem; }
+
+    li { margin: 0 0.6rem; }
+
+  }
+
+  .aside {
+
+    h2, p, li {
+      font-size: 1.3rem;
+      line-height: 1.5385;
+    }
+
+  }
 
   /* Search */
 
@@ -778,23 +856,6 @@ img#wpstats {
 
     }
 
-  }
-
-	.site_meta_container {
-
-    ul { padding: 0; }
-
-    li { margin: 0; }
-
-  }
-
-  .aside {
-    
-    h2, p, li {
-      font-size: 1.2rem;
-      line-height: 1.66667;
-    }
-  
   }
 
 }

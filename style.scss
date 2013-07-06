@@ -467,8 +467,7 @@ hr {
 }
 
 .book {
-	background: url('images/modernweb_small.png') no-repeat 14px 50%;
-  background-size: 80px 106px;
+	background: url('images/modernweb_small.jpg') no-repeat 14px 50%;
 	border: 1px solid #ccc;
 	margin-bottom: 2rem;
 	padding: 1.9rem 1.4rem 1.9rem 11rem;
@@ -785,6 +784,15 @@ img#wpstats {
       line-height: 1.66667;
     }
   
+  }
+
+}
+
+@media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
+
+  .book {
+    background-image: url('images/modernweb.jpg');
+    background-size: 80px 106px;
   }
 
 }

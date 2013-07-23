@@ -17,17 +17,19 @@ $oddcomment = '';
 ?>
 <?php if ($comments) : ?>
 <h2 id="comments"><?php comments_number('0 comments', '1 comment', '% comments'); ?>  on<br /> &#8220;<?php the_title(); ?>&#8221;</h2>
-<ol id="comments_list">
+<ol class="comments_list">
 <?php foreach ($comments as $comment) : ?>
 <li class="<?php if ($comment->comment_author_email == 'p_gasston@yahoo.com') echo 'author'; else echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
 <?php if ($comment->comment_approved == '0') : ?>
 	<p><em><?php _e('Your comment is awaiting moderation.'); ?></em></p>
 <?php endif; ?>
 	<?php comment_text() ?>
+	<div class="comment_author">
 <?php 
    echo get_avatar( $comment, $size = '35' ); 
 ?>
 <h3><span><?php comment_author_link() ?></span> [<a href="#comment-<?php comment_ID() ?>"><?php comment_date('F jS, Y') ?>, <?php comment_time() ?></a>] <?php edit_comment_link('Edit','',''); ?></h3>
+</div>
 </li>
 <?php /* Changes every other comment to a different class */
 	if ('alt' == $oddcomment) $oddcomment = '';

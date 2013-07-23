@@ -22,3 +22,33 @@ $color-dark: #2b2c2c;
   -webkit-transition: $args;
   transition: $args;
 }
+
+//Flexbox
+
+@mixin flex-display() {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-align-items($arg:stretch) {
+  -ms-flex-align: $arg;
+  -webkit-box-align: $arg;
+  -webkit-align-items: $arg;
+  align-items: $arg;
+}
+
+@mixin flex-justify-content($arg:flex-start) {
+  -ms-flex-align: $arg;
+  -webkit-box-align: $arg;
+  -webkit-align-items: $arg;
+  align-items: $arg;
+}
+
+@mixin flex($arg:0) {
+  -ms-flex: $arg;
+  -webkit-box-flex: $arg;
+  -webkit-flex: $arg;
+  flex: $arg;
+}

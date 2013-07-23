@@ -587,6 +587,7 @@ tbody {
 
   h3 {
     @include flex(1);
+    line-height: 1.286;
     margin: 0;
   }
 

@@ -40,8 +40,8 @@ $color-dark: #2b2c2c;
 }
 
 @mixin flex-justify-content($arg:flex-start) {
-  -ms-flex-align: $arg;
-  -webkit-box-align: $arg;
+  -ms-flex-pack: $arg;
+  -webkit-box-pack: $arg;
   -webkit-align-items: $arg;
   align-items: $arg;
 }

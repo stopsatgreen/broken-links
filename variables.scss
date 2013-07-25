@@ -47,6 +47,18 @@ $color-dark: #2b2c2c;
   align-items: $arg;
 }
 
+@mixin flex-direction($arg: row) {
+  -ms-flex-direction: $arg;
+  @if $arg == row {
+    -webkit-box-orient: horizontal;
+  } @else if $arg == column {
+    -webkit-box-orient: vertical;
+  }
+  -webkit-flex-direction: $arg;
+  flex-direction: $arg;
+}
+
+
 @mixin flex-justify-content($arg: flex-start) {
   @if $arg == flex-start {
     -ms-flex-pack: start;

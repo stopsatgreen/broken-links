@@ -2,6 +2,7 @@ $color-core: #30617c;
 $color-key: #50a2ce;
 $color-hilite: #727d7b;
 $color-dark: #2b2c2c;
+$color-shadow: #DDDDDD;
 
 @mixin box-shadow($args...) {
   -moz-box-shadow: $args;

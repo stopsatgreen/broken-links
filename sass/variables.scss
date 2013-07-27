@@ -1,8 +1,19 @@
-$color-core: #30617c;
-$color-key: #50a2ce;
-$color-hilite: #727d7b;
-$color-dark: #2b2c2c;
+// Default colours
+$color-key: #6C3F62;
+$color-hilite: #7F8B89;
+
+$color-darkest: #000000;
+$color-dark: #2B2C2C;
 $color-shadow: #DDDDDD;
+$color-tone-lite: #EFEFEF;
+$color-litest: #FFFFFF;
+$color-link: #9E2A3F;
+
+// Theme colours
+$theme-core: #30617C;
+$theme-key: #50A2CE;
+$theme-hilite: #727D7B;
+$theme-lines: #CDE0FF;
 
 @mixin box-shadow($args...) {
   -moz-box-shadow: $args;

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width">
 <meta name="google-site-verification" content="IE9JQVRlfKux0rlLxO41IbOoNPIdaNj7gzzVxX2PcQ4">
 <meta property="fb:admins" content="1559870173">
-<!--[if IE]>
+<!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/favicon.blue.png">

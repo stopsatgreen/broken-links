@@ -12,12 +12,16 @@ Author URI: http://www.broken-links.com/
 @import 'normalize.scss';
 @import 'variables.scss';
 
+// For a post
+
 $icomoon: '/fonts/icomoon68060/fonts/icomoon';
 
 @font-face {
   font-family: 'icomoon';
   src: url('#{$icomoon}.eot');
-  src: url('#{$icomoon}.eot?#iefix') format('embedded-opentype'), url('#{$icomoon}.woff') format('woff'), url('#{$icomoon}.ttf') format('truetype');
+  src:  url('#{$icomoon}.eot?#iefix') format('embedded-opentype'),
+        url('#{$icomoon}.woff') format('woff'),
+        url('#{$icomoon}.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -30,7 +34,7 @@ html {
 }
 
 body {
-  background-color: #fff;
+  background-color: $color-litest;
   color: #212;
   font: 500 1rem/2 'Droid Serif', 'Times New Roman', serif;
   margin: 0;
@@ -46,7 +50,7 @@ h1, h2, h3 {
 }
 
 h1, h2 {
-	border-color: black;
+	border-color: $color-darkest;
 	border-color: rgba(0,0,0,0.5);
 	border-style: solid;
 	color: #333;
@@ -73,7 +77,7 @@ h2 {
 
       &:hover,
       &:active {
-        background-color: #efefef;
+        background-color: $color-tone-lite;
         text-decoration: none;
       }
 
@@ -168,7 +172,7 @@ li h3 {
 
 pre {
   background-color: $color-dark;
-  color: white;
+  color: $color-litest;
 	font: 1.2rem/1.25 monospace, monospace;
 	margin: 2rem 0;
 	padding: 1rem 1rem;
@@ -176,7 +180,7 @@ pre {
 	word-wrap: break-word;
 
   mark {
-  	background-color: white;
+  	background-color: $color-litest;
     color: $color-dark;
   	display: inline-block;
   	outline: 1px dotted $color-dark;
@@ -184,7 +188,7 @@ pre {
 
 }
 
-a { color: #9E2A3F;
+a { color: $color-link;
 
   &:hover,
   &:hover * {
@@ -221,21 +225,22 @@ h2 a {
 }
 
 .related li {
-    color: #CDE0FF;
+    color: $theme-lines;
     list-style-type: square;
 }
 
-.more-link, .pagination { text-align: center; }
+.more-link,
+.pagination { text-align: center; }
 
 .more-link {
-  background-color: #fff;
+  background-color: $color-litest;
   display: block;
   @include transition(all 0.5s);
   
   &:hover,
   &:active {
-    background-color: #9E2A3F;
-    color: white;
+    background-color: $color-link;
+    color: $color-litest;
   }
   
   &:before { content: '\00BB  '; }
@@ -279,7 +284,7 @@ hr {
 }
 
 .container {
-  background-color: white;
+  background-color: $color-litest;
   overflow: hidden;
   padding-top: 2rem;
 }
@@ -295,7 +300,7 @@ hr {
   
   h1 {
     border-bottom: 0;
-    color: #fff;
+    color: $color-litest;
     font-size: 3.2rem;
     font-weight: normal;
     line-height: 1;
@@ -323,13 +328,13 @@ hr {
 }
 
 .nav {
-  background-color: #6C3F62;
-  border-bottom: 1rem solid #7F8B89;
+  background-color: $color-key;
+  border-bottom: 1rem solid $color-hilite;
   overflow: hidden;
 }
 
 .nav-toggle {
-  color: #fff !important;
+  color: $color-litest !important;
   display: block;
   font-size: 1.4rem;
   line-height: 2.5;
@@ -350,7 +355,7 @@ th, td {
 }
 
 thead th {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $color-darkest;
   line-height: 1.33334;
   padding-top: 0;
 }
@@ -359,34 +364,8 @@ tbody {
 
   th { text-align: left; }
 
-  tr:nth-child(even) { background-color: #efefef; }
+  tr:nth-child(even) { background-color: $color-tone-lite; }
 
-}
-
-/* Themes */
-
-.blue {
-  
-  a { color: $color-core; }
-  
-  .more-link {
-
-    &:hover,
-    &:active {
-      background-color: $color-key;
-      color: white;
-    }
-
-  }
-  
-  .header h1 a { background-image: url('images/broken-links.blue.svg'); }
-  
-  .nav {
-    background-color: $color-key;
-    border-bottom-color: $color-hilite;
-  }
-  
-  #menu-main-nav li.current_page_item { background-color: $color-hilite; }
 }
 
 .content_panel { margin: 0 1rem 1rem; }
@@ -394,12 +373,12 @@ tbody {
 .hentry { margin-bottom: 2rem; }
 
 .footer {
-    background-color: #7F8B89;
+    background-color: $color-hilite;
     clear: both;
     padding: 2rem 0;
 
     p {
-    color: white;
+    color: $color-litest;
     font-size: 1.2rem;
     padding: 0 0.6rem;
     text-indent: 0;
@@ -421,7 +400,7 @@ tbody {
     line-height: 2.5;
     padding: 0 1rem;
 
-    &.current_page_item { background-color: #7F8B89;
+    &.current_page_item { background-color: $color-hilite;
 
       a:hover,
       a:active {
@@ -431,7 +410,7 @@ tbody {
     }
 
     a {
-      color: white;
+      color: $color-litest;
       text-decoration: none;
       @include transition(none);
 
@@ -469,7 +448,7 @@ tbody {
 
 .aside {
 	background-color: rgba(205,224,255,0.2);
-	border: 1px dotted #CDE0FF;
+	border: 1px dotted $theme-lines;
 	margin-bottom: 2rem;
 	padding: 1rem 0;
 
@@ -599,7 +578,7 @@ tbody {
   }
 
   li {
-  	border-bottom: 1px dotted #CDE0FF;
+  	border-bottom: 1px dotted $theme-lines;
   	padding: 0.5rem 0 0.4rem;
   }
 
@@ -647,7 +626,7 @@ tbody {
     vertical-align: middle;
     width: 100%;
 
-    &:focus { @include box-shadow(inset 0 0 5px #9E2A3F); }
+    &:focus { @include box-shadow(inset 0 0 5px $color-link); }
 
   }
 
@@ -670,15 +649,15 @@ tbody {
   legend { display: none; }
 
   input[type='search'] {
-    background-color: #EFEFEF;
-    border: 1px solid #CDE0FF;
+    background-color: $color-tone-lite;
+    border: 1px solid $theme-lines;
     border-radius: 2px;
     font-size: 1.6rem;
     padding: 2px;
   }
 
   label {
-  	color: white;
+  	color: $color-litest;
   	font-weight: bold;
   	line-height: 1.66667;
   	text-align: left;
@@ -714,7 +693,7 @@ img#wpstats {
 /* Lanyrd Theme */
 
 #lanyrd-topbar.lanyrd-theme-brokenlinks {
-	background-color: #000;
+	background-color: $color-darkest;
 	margin-bottom: 0;
 
   p { font-size: 1.4rem; }
@@ -748,6 +727,33 @@ img#wpstats {
     font: 0.9rem Arial, sans-serif;
     text-decoration: none;
   }
+
+}
+
+/* Themes */
+
+.blue {
+  
+  a { color: $theme-core; }
+  
+  .more-link {
+
+    &:hover,
+    &:active {
+      background-color: $theme-key;
+      color: $color-litest;
+    }
+
+  }
+  
+  .header h1 a { background-image: url('images/broken-links.blue.svg'); }
+  
+  .nav {
+    background-color: $theme-key;
+    border-bottom-color: $theme-hilite;
+  }
+  
+  .main-nav li.current_page_item { background-color: $theme-hilite; }
 
 }
 
@@ -808,7 +814,7 @@ img#wpstats {
 
     &:hover,
     &:active {
-      text-shadow: 1px 1px 1px $color-core;
+      text-shadow: 1px 1px 1px $theme-core;
     }
 
   }
@@ -840,7 +846,7 @@ img#wpstats {
 
   /* Navigation */
 
-  .main-nav li.current_page_item { text-shadow: 0 1px 1px black; }
+  .main-nav li.current_page_item { text-shadow: 0 1px 1px $color-darkest; }
 
   .navigation {
 

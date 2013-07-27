@@ -507,7 +507,7 @@ tbody {
 
     &:last-child { margin-bottom: 0; }
 
-    }
+  }
 
 }
 
@@ -555,8 +555,8 @@ tbody {
 }
 
 .comment_author {
-  @include flex-display();
   @include flex-align-items(center);
+  @include flex-display();
 
   .avatar { margin: 0 1.4rem; }
 
@@ -763,8 +763,7 @@ img#wpstats {
 
   h1, h2, h3 { font-weight: normal; }
 
-  h1, h2 { text-shadow: 2px 1px 1px $color-shadow; 
-  }
+  h1, h2 { text-shadow: 2px 1px 1px $color-shadow; }
 
   h1,  
   h2.entry-title {
@@ -931,8 +930,9 @@ img#wpstats {
 }
 
 $mq-dpr: 1.5;
-$mq-dpi: $mq-dpr * 96;
-@media (min-resolution: #{$mq-dpr}dppx), (min-resolution: #{$mq-dpi}dpi), (-webkit-min-device-pixel-ratio: $mq-dpr) {
+@media  (min-resolution: $mq-dpr + dppx),
+        (min-resolution: ($mq-dpr * 96) + dpi),
+        (-webkit-min-device-pixel-ratio: $mq-dpr) {
 
   .book {
     background-image: url('images/modernweb.jpg');

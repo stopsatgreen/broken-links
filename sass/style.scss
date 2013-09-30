@@ -899,6 +899,15 @@ img#wpstats {
 
 }
 
+@media screen and (min-width: 768px) {
+  
+  .site-top {
+    position: sticky;
+    top: 0;
+  }
+
+}
+
 @media screen and (max-width: 480px) {
 
   .search { padding-bottom: 0.5em; }

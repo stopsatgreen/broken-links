@@ -27,23 +27,25 @@ header h2 a { color: white; }
 	<?php wp_head(); ?>
 </head>
 <body id="peter-gasston">
-<div class="header" role="banner">
-  <div class="inside">
-    <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-    <?php include(TEMPLATEPATH . '/searchform.php'); ?>
-  </div>
-</div>
-<div class="nav" role="navigation">
-	<a href="#peter-gasston" class="nav-toggle">Navigation</a>
-  <div class="inside">
-<?php 
-	$navargs = array(
-		'theme_location' => 'primary',
-		'container' => '',
-		'menu_class' => 'main-nav',
-		'menu_id' => ''
-	);
-	wp_nav_menu($navargs);
-?>
-  </div>
+<div class="site-top">
+	<div class="header" role="banner">
+	  <div class="inside">
+	    <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+	    <?php include(TEMPLATEPATH . '/searchform.php'); ?>
+	  </div>
+	</div>
+	<div class="nav" role="navigation">
+		<a href="#peter-gasston" class="nav-toggle">Navigation</a>
+	  <div class="inside">
+	<?php 
+		$navargs = array(
+			'theme_location' => 'primary',
+			'container' => '',
+			'menu_class' => 'main-nav',
+			'menu_id' => ''
+		);
+		wp_nav_menu($navargs);
+	?>
+	  </div>
+	</div>
 </div>

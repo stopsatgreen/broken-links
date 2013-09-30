@@ -1,10 +1,22 @@
 <?php get_header(); ?>
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+	var noSpeech = (window.speechSynthesis === undefined || window.speechSynthesis === null);
+	if(!noSpeech) {
+		var frm = document.getElementById('say'),
+			txt = frm.textContent,
+			spk = new SpeechSynthesisUtterance(txt);
+		spk.lang = '<?php bloginfo('language'); ?>';
+		window.speechSynthesis.speak(spk);
+	}
+});
+</script>
 <div class="container">
 <div class="section content_panel">
 <!-- Start the loop -->
 	<div class="article intro">
 	<h1>Search Results</h1>
-<p><?php echo $wp_query->found_posts; ?> results found for &#8220;<em><?php echo get_search_query(); ?></em>&#8221;</p>
+<p id="say"><?php echo $wp_query->found_posts; ?> results found for &#8220;<em><?php echo get_search_query(); ?></em>&#8221;</p>
 	</div>
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 	<?php include(TEMPLATEPATH . '/hentry.php'); ?>

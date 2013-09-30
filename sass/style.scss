@@ -211,6 +211,12 @@ h2 a {
   }
 }
 
+.embed-vimeo,
+.embed-youtube {
+  display: block;
+  padding-top: 1.6rem;
+}
+
 .post_meta {
     list-style-type: none;
     margin-bottom: 2rem;

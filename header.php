@@ -4,11 +4,15 @@
 <meta charset="<?php bloginfo('charset'); ?>">
 <title><?php wp_title(''); ?></title>
 <meta name="viewport" content="width=device-width">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="google-site-verification" content="IE9JQVRlfKux0rlLxO41IbOoNPIdaNj7gzzVxX2PcQ4">
 <meta property="fb:admins" content="1559870173">
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+<link rel="shortcut icon" sizes="196x196" href="http://www.broken-links.com/wp-content/themes/broken-links/images/broken-links-196.png">
+<link rel="shortcut icon" sizes="128x128" href="<?php bloginfo('template_directory'); ?>/images/broken-links-128.png">
+<!--link rel="apple-touch-icon" sizes="128x128" href="<?php bloginfo('template_directory'); ?>/images/broken-links-128.png"-->
 <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/favicon.blue.png">
 <link rel="logo" type="image/svg" href="<?php bloginfo('template_directory'); ?>/images/broken-links.blue.svg">
 <link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold|Source+Sans+Pro:700" rel="stylesheet" media="screen and (min-width: 481px)">

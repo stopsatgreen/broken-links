@@ -899,7 +899,7 @@ img#wpstats {
 
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) and (max-aspect-ratio: 4/3) {
   
   .site-top {
     position: sticky;

@@ -125,13 +125,6 @@ h3, p, ul, ol {
 
 }
 
-code, figcaption { font-style: italic; }
-
-code {
-  color: #57427C;
-  font-family: monospace;
-}
-
 .article h3 { text-transform: uppercase; }
 
 #page-1280 h3,
@@ -170,6 +163,15 @@ li h3 {
 }
 
 .article ul { list-style-type: disc; }
+
+figure { margin-top: 1.6rem; }
+
+code, figcaption { font-style: italic; }
+
+code {
+  color: #57427C;
+  font-family: monospace;
+}
 
 pre {
   background-color: $color-dark;

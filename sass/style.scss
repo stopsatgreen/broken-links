@@ -94,7 +94,7 @@ h2 {
 
 h3 span { font-weight: bold; }
 
-h3, p, li {
+h3, p, li, figcaption {
   font-size: 1.4rem;
   line-height: 1.42858;
 }
@@ -125,10 +125,11 @@ h3, p, ul, ol {
 
 }
 
+code, figcaption { font-style: italic; }
+
 code {
   color: #57427C;
   font-family: monospace;
-  font-style: italic;
 }
 
 .article h3 { text-transform: uppercase; }

@@ -522,6 +522,22 @@ tbody {
 
 }
 
+/* Pages */
+
+ul.past-events { list-style: none;
+
+  li { margin-bottom: 1rem;
+
+    b a { text-decoration: none;
+
+      &:hover { text-decoration: underline; }
+
+    }
+
+  }
+
+}
+
 /* Comments */
 
 .comments_list {

@@ -6,6 +6,16 @@
 
 	<article id="post-<?php the_ID(); ?>" class="hentry">
 	<h1 class="entry-title"><?php the_title_attribute(); ?></h1>
+<?php
+    // date('U')          = Current date in seconds since 1 January 1970 (Unix time)
+    // get_the_time('U')  = Date of publication of the article in seconds 1 January 1970 (Unix time)
+    // 15778800           = Seconds in six months
+    if ((date('U') - get_the_time('U')) >= 15778800) { ?>
+    <div class="old-post">
+    	<p><strong>Warning</strong> This article was written over six months ago, and may contain outdated information.</p>
+    </div>
+<?php } ?>
+
 <div class="entry-content">
 	<?php the_content(); ?>
 </div>

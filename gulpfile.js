@@ -1,12 +1,16 @@
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    paths = {
-        styles: {
-            src: 'sass/style.scss',
-            files: 'sass/*.scss',
-            dest: ''
-        }
+    cache = require('gulp-cache'),
+    imagemin = require('gulp-imagemin'),
+    notify = require('gulp-notify'),
+    sass = require('gulp-sass');
+    
+var paths = {
+    styles: {
+        src: 'sass/style.scss',
+        files: 'sass/*.scss',
+        dest: ''
     }
+}
 
 // Setting up the sass task
 gulp.task('sass', function () {
@@ -23,7 +27,14 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(paths.styles.dest))
 });
 
-gulp.task('default', ['sass'], function() { 
+gulp.task('images', function () {
+    return gulp.src('images/*')
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('images'))
+    .pipe(notify({ message: 'Images done' }));
+});
+
+gulp.task('default', ['sass','images'], function() { 
     // Watch the files in the paths object, and when there is a change, fun the functions in the array
     gulp.watch(paths.styles.files, ['sass'])
     // Also when there is a change, display what file was changed, only showing the path after the 'sass folder'

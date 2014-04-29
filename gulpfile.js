@@ -19,15 +19,7 @@ gulp.task('sass', function () {
         sourceComments: 'map',
         includePaths : [paths.styles.src]
     }))
-    // If there is an error, don't stop compiling but use the custom displayError function
-    // .on('error', function(err){
-    //     displayError(err);
-    // })
-    // Pass the compiled sass through the prefixer with defined 
-    // .pipe(prefix(
-    //     'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'
-    // ))
-    // Funally put the compiled sass into a css file
+    // Finally put the compiled sass into a css file
     .pipe(gulp.dest(paths.styles.dest))
 });
 

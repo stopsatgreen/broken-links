@@ -1,12 +1,12 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var paths = {
-    styles: {
-        src: 'sass/style.scss',
-        files: 'sass/*.scss',
-        dest: ''
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    paths = {
+        styles: {
+            src: 'sass/style.scss',
+            files: 'sass/*.scss',
+            dest: ''
+        }
     }
-}
 
 // Setting up the sass task
 gulp.task('sass', function () {

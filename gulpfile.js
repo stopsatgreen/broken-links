@@ -9,6 +9,10 @@ var gulp = require('gulp'),
     sass = require('gulp-sass');
     
 var paths = {
+    images: {
+        src: 'images/*',
+        dest: 'images'
+    },
     styles: {
         src: 'sass/style.scss',
         files: 'sass/*.scss',
@@ -32,9 +36,9 @@ gulp.task('sass', function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src('images/*')
+    return gulp.src(paths.images.src)
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('images'))
+    .pipe(gulp.dest(paths.images.dest))
     .pipe(notify({
         message: 'Images done',
         onLast: true

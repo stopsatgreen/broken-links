@@ -1,3 +1,7 @@
+/*
+Huge thanks to this tutorial by Mark Goodyear: http://markgoodyear.com/2014/01/getting-started-with-gulp/
+*/
+
 var gulp = require('gulp'),
     cache = require('gulp-cache'),
     imagemin = require('gulp-imagemin'),
@@ -31,7 +35,10 @@ gulp.task('images', function () {
     return gulp.src('images/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest('images'))
-    .pipe(notify({ message: 'Images done' }));
+    .pipe(notify({
+        message: 'Images done',
+        onLast: true
+    }));
 });
 
 gulp.task('default', ['sass','images'], function() { 

@@ -3,7 +3,7 @@ Huge thanks to this tutorial by Mark Goodyear: http://markgoodyear.com/2014/01/g
 */
 
 var gulp = require('gulp'),
-    cache = require('gulp-cache'),
+    cache = require('gulp-cached'),
     imagemin = require('gulp-imagemin'),
     notify = require('gulp-notify'),
     sass = require('gulp-sass');

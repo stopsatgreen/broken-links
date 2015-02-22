@@ -20,9 +20,6 @@
 	<?php the_content(); ?>
 </div>
 </article>
-<?php if(related_posts_exist()) : ?>
-<?php related_posts(); ?>
-<?php endif; ?>
 	<!-- Comments template -->
 	<?php comments_template(); ?>
 <?php endwhile; ?>

@@ -958,3 +958,18 @@ $mq-dpr: 1.5;
     background-size: 80px 106px;
   }
 }
+
+/* JETPACK */
+
+#peter-gasston div#jp-relatedposts {
+
+  h3.jp-relatedposts-headline {
+    display: block;
+    float: none;
+    font-size: 1.6rem;
+  }
+
+  p.jp-relatedposts-post {
+    text-indent: 0;
+  }
+}

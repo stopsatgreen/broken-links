@@ -5,7 +5,6 @@
 <title><?php wp_title(''); ?></title>
 <meta name="viewport" content="width=device-width">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="google-site-verification" content="IE9JQVRlfKux0rlLxO41IbOoNPIdaNj7gzzVxX2PcQ4">
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->

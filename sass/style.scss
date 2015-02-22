@@ -502,7 +502,7 @@ tbody {
 }
 
 .book {
-	background: url('images/modernweb_small.jpg') no-repeat 14px 50%;
+	background: url('images/css3_2e.png') no-repeat 14px 50%;
 	border: 1px solid #ccc;
 	margin-bottom: 2rem;
 	padding: 1.9rem 1.4rem 1.9rem 11rem;
@@ -955,7 +955,6 @@ $mq-dpr: 1.5;
         (-webkit-min-device-pixel-ratio: $mq-dpr) {
 
   .book {
-    background-image: url('images/modernweb.jpg');
     background-size: 80px 106px;
   }
 }

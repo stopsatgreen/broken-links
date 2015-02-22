@@ -10,10 +10,12 @@
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<link rel="shortcut icon" sizes="196x196" href="http://www.broken-links.com/wp-content/themes/broken-links/images/broken-links-196.png">
+<!-- <link rel="shortcut icon" sizes="196x196" href="http://www.broken-links.com/wp-content/themes/broken-links/images/broken-links-196.png">
 <link rel="shortcut icon" sizes="128x128" href="<?php bloginfo('template_directory'); ?>/images/broken-links-128.png">
-<!--link rel="apple-touch-icon" sizes="128x128" href="<?php bloginfo('template_directory'); ?>/images/broken-links-128.png"-->
+<link rel="apple-touch-icon" sizes="128x128" href="<?php bloginfo('template_directory'); ?>/images/broken-links-128.png"> -->
+
 <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/favicon.blue.png">
+<link rel="manifest" href="<?php bloginfo('template_directory'); ?>/manifest.json">
 <link rel="logo" type="image/svg" href="<?php bloginfo('template_directory'); ?>/images/broken-links.blue.svg">
 <link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold|Source+Sans+Pro:700" rel="stylesheet" media="screen and (min-width: 481px)">
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
@@ -41,7 +43,7 @@ header h2 a { color: white; }
 	<div class="nav" role="navigation">
 		<a href="#peter-gasston" class="nav-toggle">Navigation</a>
 	  <div class="inside">
-	<?php 
+	<?php
 		$navargs = array(
 			'theme_location' => 'primary',
 			'container' => '',

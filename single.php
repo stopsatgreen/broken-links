@@ -20,9 +20,6 @@
 	<?php the_content(); ?>
 </div>
 </article>
-<?php if(related_posts_exist()) : ?>	
-<?php related_posts(); ?>
-<?php endif; ?>
 	<!-- Comments template -->
 	<?php comments_template(); ?>
 <?php endwhile; ?>
@@ -42,7 +39,6 @@
 	<li class="post_date"><?php the_date(); ?> [<a href="<?php the_permalink(); ?>">Permalink</a>] <?php edit_post_link('Edit'); ?></li>
 	<li class="post_tags">Tags: <?php the_category(', ') ?></li>
 	</ul>
-<?php the_flattr_permalink() ?>
 </div>
 <?php get_sidebar(); ?>
 </div>

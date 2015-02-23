@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-/*  
+/*
 Theme Name: Broken Links v3
 Theme URI: http://www.broken-links.com/
 Description: All-new theme initially inspired by a magazine layout from the 1970s. Typography-rich, graphics poor. Still under development. Uses the <;a href="http://www.famfamfam.com/lab/icons/silk/" target="_blank">Silk</a> icons set.
@@ -9,8 +9,8 @@ Author: Peter Gasston
 Author URI: http://www.broken-links.com/
 */
 
-@import 'normalize.scss';
-@import 'variables.scss';
+@import 'normalize';
+@import 'variables';
 
 // For a post
 
@@ -135,10 +135,10 @@ h3, p, ul, ol {
 
 blockquote {
   margin: 2rem 0 2rem 3.6rem;
-  
+
   p:first-child {
     text-indent: -0.75rem;
-    
+
     &:before {
      content: '\201c';
      color: #556;
@@ -226,7 +226,7 @@ h2 a {
     list-style-type: none;
     margin-bottom: 2rem;
     padding: 0 1rem;
-  
+
   li {
   	font-size: 1.2rem;
   	font-variant: small-caps;
@@ -249,13 +249,13 @@ h2 a {
   background-color: $color-litest;
   display: block;
   @include transition(all 0.5s);
-  
+
   &:hover,
   &:active {
     background-color: $color-link;
     color: $color-litest;
   }
-  
+
   &:before { content: '\00BB  '; }
 }
 
@@ -270,11 +270,11 @@ hr {
 .category,
 .wp-tag-cloud {
   list-style: none;
-  
+
   li { display: inline;
-  
+
     &:after { content: ','; }
-  
+
     &:last-child:after { content: '.'; }
   }
 }
@@ -314,14 +314,14 @@ hr {
 }
 
 .header { background-color: $color-dark;
-  
+
   .inside {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 1rem;
     position: relative;
   }
-  
+
   h1 {
     border-bottom: 0;
     color: $color-litest;
@@ -426,7 +426,7 @@ tbody {
       a:active {
         text-decoration: none;
       }
-    
+
     }
 
     a {
@@ -438,27 +438,27 @@ tbody {
         background-color: transparent;
         color: #ffff9a;
         text-decoration: underline;
-      }    
+      }
     }
   }
 }
 
 .navigation {
-  
+
   li, h3 { line-height: 1.66667; }
-  
+
   li {
   	font-size: 1.2rem;
   	padding: 0 0.6rem;
   }
-  
+
   h3 {
   	padding: 0;
   	text-transform: uppercase;
   }
 
   .h-list { margin: 0; }
-} 
+}
 
 /* Asides */
 
@@ -498,11 +498,11 @@ tbody {
 
 .hfeed .aside p { margin-bottom: 0;
 
-  & + p { text-indent: 1.4rem; } 
+  & + p { text-indent: 1.4rem; }
 }
 
 .book {
-	background: url('images/modernweb_small.jpg') no-repeat 14px 50%;
+	background: url('images/css3_2e.png') no-repeat 14px 50%;
 	border: 1px solid #ccc;
 	margin-bottom: 2rem;
 	padding: 1.9rem 1.4rem 1.9rem 11rem;
@@ -541,7 +541,7 @@ ul.past-events { list-style: none;
   list-style: none;
   margin-bottom: 0;
   padding: 0;
-  
+
   li {
     font-size: 1rem;
     padding: 2.1rem 0;
@@ -755,9 +755,9 @@ img#wpstats {
 /* Themes */
 
 .blue {
-  
+
   a { color: $theme-core; }
-  
+
   .more-link {
 
     &:hover,
@@ -767,14 +767,14 @@ img#wpstats {
     }
 
   }
-  
+
   .header h1 a { background-image: url('images/broken-links.blue.svg'); }
-  
+
   .nav {
     background-color: $theme-key;
     border-bottom-color: $theme-hilite;
   }
-  
+
   .main-nav li.current_page_item { background-color: $theme-hilite; }
 
 }
@@ -787,7 +787,7 @@ img#wpstats {
 
   h1, h2 { text-shadow: 2px 1px 1px $color-shadow; }
 
-  h1,  
+  h1,
   h2.entry-title {
     margin-bottom: 2rem;
   }
@@ -811,7 +811,7 @@ img#wpstats {
   }
 
   .more-link {
-    
+
     &:hover,
     &:active {
       text-shadow: 1px 1px 1px #335;
@@ -880,7 +880,7 @@ img#wpstats {
   .aside { padding: 2rem 0; }
 
   /* Site Meta */
-  
+
   .site_meta_container {
 
     ul { padding: 0 1rem; }
@@ -908,7 +908,7 @@ img#wpstats {
 }
 
 @media (min-width: 768px) and (max-aspect-ratio: 4/3) {
-  
+
   .site-top {
     position: sticky;
     top: 0;
@@ -955,7 +955,21 @@ $mq-dpr: 1.5;
         (-webkit-min-device-pixel-ratio: $mq-dpr) {
 
   .book {
-    background-image: url('images/modernweb.jpg');
     background-size: 80px 106px;
+  }
+}
+
+/* JETPACK */
+
+#peter-gasston div#jp-relatedposts {
+
+  h3.jp-relatedposts-headline {
+    display: block;
+    float: none;
+    font-size: 1.6rem;
+  }
+
+  p.jp-relatedposts-post {
+    text-indent: 0;
   }
 }

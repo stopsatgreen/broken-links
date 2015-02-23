@@ -7,10 +7,6 @@
 <?php if ( is_active_sidebar(2) ) : ?>
 	<?php dynamic_sidebar( 'Posts' ); ?>
 <?php endif; ?>
-		<!--ul class="posts-popular">
-		<li><h3>Popular Posts</h3></li>
-		<?php getPopularPosts(5,7,' &raquo; Broken Links'); ?>
-		</ul-->
 	<hr class="ornament" />
 	<ul>
 	<li class="rss"><a href="<?php bloginfo('rss2_url'); ?>">Subscribe to the RSS Feed</a></li>

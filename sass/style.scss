@@ -51,7 +51,7 @@ h1, h2, h3 {
 
 h1, h2 {
 	border-color: $color-darkest;
-	border-color: rgba(0,0,0,0.5);
+	border-color: rgba($color-darkest,0.5);
 	border-style: solid;
 	color: #333;
   font-size: 2rem;
@@ -502,7 +502,7 @@ tbody {
 }
 
 .book {
-	background: url('images/css3_2e.png') no-repeat 14px 50%;
+	background: url('images/css3_2e.png') no-repeat 14px 50% / 80px 106px;
 	border: 1px solid #ccc;
 	margin-bottom: 2rem;
 	padding: 1.9rem 1.4rem 1.9rem 11rem;
@@ -947,16 +947,6 @@ img#wpstats {
   h1.entry-title { padding-bottom: 1rem; }
 
   .hfeed .aside { margin-bottom: 0; }
-}
-
-$mq-dpr: 1.5;
-@media  (min-resolution: $mq-dpr + dppx),
-        (min-resolution: ($mq-dpr * 96) + dpi),
-        (-webkit-min-device-pixel-ratio: $mq-dpr) {
-
-  .book {
-    background-size: 80px 106px;
-  }
 }
 
 /* JETPACK */
